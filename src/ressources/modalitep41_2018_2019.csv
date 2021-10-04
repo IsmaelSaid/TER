@@ -1,0 +1,33 @@
+essai,modalité,parcelle,caracteristiques,ligne,colonne,bloc
+P41,TE,P1,TE,1,1,1
+P41,M4,P2,V. unguiculata,1,2,1
+P41,M6,P3,C. spectabilis,1,3,1
+P41,M1,P4,Nyger,1,4,1
+P41,TP,P5,TP,2,4,1
+P41,M2,P6,C. ensiformis,2,3,1
+P41,M3,P7,Moutarde d'abyssinie,2,2,1
+P41,M5,P8,C. juncea,2,1,1
+P41,M6,P9,C. spectabilis,3,1,2
+P41,M3,P10,Moutarde d'abyssinie,3,2,2
+P41,M2,P11,C. ensiformis,3,3,2
+P41,TE,P12,TE,3,4,2
+P41,M4,P13,V. unguiculata var 40j,4,4,2
+P41,M1,P14,Nyger,4,3,2
+P41,M5,P15,C. juncea,4,2,2
+P41,TP,P16,TP,4,1,2
+P41,M2,P17,C. ensiformis,5,1,3
+P41,M6,P18,C. spectabilis,5,2,3
+P41,TP,P19,TP,5,3,3
+P41,M5,P20,C. juncea,5,4,3
+P41,TE,P21,TE,6,4,3
+P41,M4,P22,V. unguiculata var 40j,6,3,3
+P41,M3,P23,Moutarde d'abyssinie,6,2,3
+P41,M1,P24,Nyger,6,1,3
+P41,M1,P25,Nyger,7,1,4
+P41,TE,P26,TE,7,2,4
+P41,M5,P27,C. juncea,7,3,4
+P41,M3,P28,Moutarde d'abyssinie,7,4,4
+P41,TP,P29,TP,8,4,4
+P41,M6,P30,C. spectabilis,8,3,4
+P41,M2,P31,C. ensiformis,8,2,4
+P41,M4,P32,V. unguiculata var 40j,8,1,4
