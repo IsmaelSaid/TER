@@ -2243,17 +2243,18 @@
 									"model": {
 										"$ref": "AAAAAAF8S2nhsSaCLLk="
 									},
-									"visible": false,
 									"font": "Arial;13;0",
-									"left": 403,
+									"left": 371,
 									"top": 354,
+									"width": 65.39990234375,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
 									"hostEdge": {
 										"$ref": "AAAAAAF8S2nhsyaQmWw="
 									},
-									"edgePosition": 1
+									"edgePosition": 1,
+									"text": "+comprend"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -2590,7 +2591,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF8ShTkfT5qi68="
 							},
-							"name": "nom_parcelle"
+							"name": "nom_parcelle",
+							"type": ""
 						}
 					]
 				},
@@ -2625,6 +2627,7 @@
 								"$ref": "AAAAAAF8SzYaBhy/01s="
 							},
 							"name": "code_modalite",
+							"type": "",
 							"isID": true
 						}
 					]
@@ -2688,6 +2691,7 @@
 								"$ref": "AAAAAAF8Szrp+R5CfIg="
 							},
 							"name": "code_facteur",
+							"type": "",
 							"isID": true
 						}
 					]
@@ -2715,6 +2719,7 @@
 								"$ref": "AAAAAAF8S0TrniAnO/4="
 							},
 							"name": "code_adventice",
+							"type": "",
 							"isID": true
 						}
 					]
@@ -2777,7 +2782,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF8S11m5CDX4TA="
 							},
-							"name": "Localisation"
+							"name": "Localisation",
+							"type": ""
 						}
 					]
 				},
@@ -2879,6 +2885,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8S2nhsCaB4K0="
 							},
+							"name": "comprend",
 							"end1": {
 								"_type": "UMLAssociationEnd",
 								"_id": "AAAAAAF8S2nhsiaD7KA=",
