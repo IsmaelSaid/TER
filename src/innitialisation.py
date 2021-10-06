@@ -57,7 +57,7 @@ createdBy =[createEssaiSql,createParcelleSql,createEssaiParcelleSql,createFacteu
 
 
 # ======================= Commandes suppression des tables  =======================================
-deletedBy=["DROP TABLE EssaiParcelle","DROP TABLE Essai","DROP TABLE Parcelle CASCADE","DROP TABLE Facteur CASCADE","DROP TABLE Modalite","DROP TABLE Adventice","DROP TABLE NoteAdventice"]
+deletedBy=["DROP TABLE IF EXISTS EssaiParcelle","DROP TABLE IF EXISTS Essai","DROP TABLE IF EXISTS Parcelle CASCADE","DROP TABLE IF EXISTS Facteur CASCADE","DROP TABLE IF EXISTS Modalite","DROP TABLE IF EXISTS Adventice","DROP TABLE IF EXISTS NoteAdventice"]
 
 # =======================Execution =======================================
 
@@ -68,8 +68,6 @@ for req in deletedBy:
 for request in createdBy:
     print(request)
     cur.execute(request)
-
-print(cur.execute("SELECT * FROM Parcelle"))
 
 
 # ======================= Données de test =======================================
