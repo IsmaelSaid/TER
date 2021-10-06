@@ -1,31 +1,64 @@
 # Ce script sert a innitialiser les données de la base de donnée
-
-# Connexion a la base de donnée postGresql
 import psycopg2 as ps
+
+# ======================= Connexion a la base de donnée postGresql ================================
 host = "localhost"
 user = "ismael"
 password = "admin"
 database = "projet"
 conn = ps.connect("host=%s dbname=%s user=%s password=%s" % (host, database, user,password))
 
+
+# =======================Commandes de création de la table =======================================
+
 cur = conn.cursor()
 
-# Commandes de création de la table
-# table 
 
-request1 = "CREATE TABLE utilisateur(\
-    id INT PRIMARY KEY NOT NULL,\
-    nom VARCHAR(100),\
-    prenom VARCHAR(100),\
-    email VARCHAR(255),\
-    date_naissance DATE,\
-    pays VARCHAR(255),\
-    ville VARCHAR(255),\
-    code_postal VARCHAR(5),\
-    nombre_achat INT\
-)"
+#Table Essai
+createEssaiSql = "CREATE TABLE Essai(\
+    codeEssai INT PRIMARY KEY,\
+    nomEssai VARCHAR(250))"
 
-request2 ="DROP TABLE  utilisateur"
+#  Table Parcelle
+createParcelleSql="CREATE TABLE Parcelle(\
+    codeParcelle INT PRIMARY KEY NOT NULL,\
+    bloc VARCHAR(255),\
+    nomParcelle VARCHAR)"
 
-cur.execute(request2)
+# # Table EssaiParcelle
+createEssaiParcelleSql="CREATE TABLE EssaiParcelle(\
+    dateDebut DATE,\
+    codeParcelle INT FOREIGN KEY REFERENCES Parcelle(codeParcelle),\
+    codeEssai INT FOREIGN KEY REFERENCES Essai(nomEssai))"
+
+
+# # Table Facteur
+createFacteurSql="CREATE TABLE Facteur(\
+    codeFacteur INT PRIMARY KEY NOT NULL,\
+    descriptionFacteur VARCHAR(250))"
+
+# # Table Modalite
+createModaliteSql="CREATE TABLE Modalite(\
+    dateApplicationModalite DATE,\
+    codeParcelle INT FOREIGN KEY REFERENCES Parcelle(codeParcelle),\
+    codeFacteur INT FOREIGN KEY REFERENCES Facteur(codeFacteur))" 
+
+
+# # Table Adventice t
+
+createAdventiceSql="CREATE Adventice(codeAdventice INT PRIMARY KEY NOT NULL,\
+    nomAdventice VARCHAR(250))"
+
+# # Table noteAdventice 
+createNoteAdventice = "CREATE NoteAdventice(dateNotation DATE,\
+    localisation VARCHAR(250))"
+
+
+
+createdBy =[createEssaiSql,createParcelleSql,createEssaiParcelleSql,createFacteurSql,createFacteurSql,createAdventiceSql,createNoteAdventice]
+
+for request in createdBy:
+    print(request)
+
+# cur.execute(createEssaiSql)
 conn.commit()
