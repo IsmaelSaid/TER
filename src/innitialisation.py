@@ -55,7 +55,7 @@ createNoteAdventice = "CREATE NoteAdventice(dateNotation DATE,\
 
 
 
-createdBy =[createEssaiSql,createParcelleSql,createEssaiParcelleSql,createFacteurSql,createFacteurSql,createAdventiceSql,createNoteAdventice]
+createdBy =[createEssaiSql,createParcelleSql,createEssaiParcelleSql,createFacteurSql,createModaliteSql,createAdventiceSql,createNoteAdventice]
 
 for request in createdBy:
     print(request)
