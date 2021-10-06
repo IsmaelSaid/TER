@@ -7,12 +7,9 @@ user = "ismael"
 password = "admin"
 database = "projet"
 conn = ps.connect("host=%s dbname=%s user=%s password=%s" % (host, database, user,password))
-
-
-# =======================Commandes de création de la table =======================================
-
 cur = conn.cursor()
 
+# ======================= Commandes de création des tables =======================================
 
 #Table Essai
 createEssaiSql = "CREATE TABLE Essai(\
@@ -41,7 +38,8 @@ createFacteurSql="CREATE TABLE Facteur(\
 createModaliteSql="CREATE TABLE Modalite(\
     dateApplicationModalite DATE,\
     codeParcelle INT REFERENCES Parcelle(codeParcelle),\
-    codeFacteur INT REFERENCES Facteur(codeFacteur))" 
+    codeFacteur INT REFERENCES Facteur(codeFacteur),\
+    PRIMARY KEY (codeFacteur,dateApplicationModalite))"
 
 
 # # Table Adventice
@@ -53,7 +51,7 @@ createAdventiceSql="CREATE TABLE Adventice(codeAdventice INT PRIMARY KEY NOT NUL
 createNoteAdventice = "CREATE TABLE NoteAdventice(dateNotation DATE,\
     localisation VARCHAR(250))"
 
-
+# TODO: Ecrire les CI pour: Localisation data_notation & date_application_modalite
 
 createdBy =[createEssaiSql,createParcelleSql,createEssaiParcelleSql,createFacteurSql,createModaliteSql,createAdventiceSql,createNoteAdventice]
 
@@ -68,7 +66,35 @@ for req in deletedBy:
     cur.execute(req)
 
 for request in createdBy:
-    print("Requete",request)
+    print(request)
     cur.execute(request)
 
+print(cur.execute("SELECT * FROM Parcelle"))
+
+
+# ======================= Données de test =======================================
+# TODO
+
+# Toute les parcelles seront dans cette table
+
+# Ajout de parcelles
+cur.execute(\
+    "INSERT INTO Parcelle (codeParcelle,bloc,nomParcelle) VALUES\
+    (1,'1','nom parcelle 1'),\
+    (2,'2','nom parcelle 2'),\
+    (3,'1','nom parcelle 3')")
+
+# Ajout d'essai
+
+cur.execute(\
+    "INSERT INTO Essai (codeessai,nomessai) VALUES\
+    (1,'nom essai 1'),\
+    (2,'nom essai 1'),\
+    (3,'nom essai 2')")
+
+
 conn.commit()
+# =======================Données réels=====================================
+def fillDatabase():
+    # TODO 
+    print("a développer")
