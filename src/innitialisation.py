@@ -57,9 +57,11 @@ createNoteAdventice = "CREATE TABLE NoteAdventice(dateNotation DATE,\
 
 createdBy =[createEssaiSql,createParcelleSql,createEssaiParcelleSql,createFacteurSql,createModaliteSql,createAdventiceSql,createNoteAdventice]
 
+
+# ======================= Commandes suppression des tables  =======================================
 deletedBy=["DROP TABLE EssaiParcelle","DROP TABLE Essai","DROP TABLE Parcelle CASCADE","DROP TABLE Facteur CASCADE","DROP TABLE Modalite","DROP TABLE Adventice","DROP TABLE NoteAdventice"]
 
-# Suppression des tables 
+# =======================Execution =======================================
 
 for req in deletedBy:
     print(req)
