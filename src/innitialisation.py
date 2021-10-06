@@ -28,8 +28,8 @@ createParcelleSql="CREATE TABLE Parcelle(\
 # # Table EssaiParcelle
 createEssaiParcelleSql="CREATE TABLE EssaiParcelle(\
     dateDebut DATE,\
-    codeParcelle INT FOREIGN KEY REFERENCES Parcelle(codeParcelle),\
-    codeEssai INT FOREIGN KEY REFERENCES Essai(nomEssai))"
+    codeParcelle INT REFERENCES Parcelle(codeParcelle),\
+    codeEssai INT REFERENCES Essai(codeEssai))"
 
 
 # # Table Facteur
@@ -40,25 +40,33 @@ createFacteurSql="CREATE TABLE Facteur(\
 # # Table Modalite
 createModaliteSql="CREATE TABLE Modalite(\
     dateApplicationModalite DATE,\
-    codeParcelle INT FOREIGN KEY REFERENCES Parcelle(codeParcelle),\
-    codeFacteur INT FOREIGN KEY REFERENCES Facteur(codeFacteur))" 
+    codeParcelle INT REFERENCES Parcelle(codeParcelle),\
+    codeFacteur INT REFERENCES Facteur(codeFacteur))" 
 
 
-# # Table Adventice t
+# # Table Adventice
 
-createAdventiceSql="CREATE Adventice(codeAdventice INT PRIMARY KEY NOT NULL,\
+createAdventiceSql="CREATE TABLE Adventice(codeAdventice INT PRIMARY KEY NOT NULL,\
     nomAdventice VARCHAR(250))"
 
 # # Table noteAdventice 
-createNoteAdventice = "CREATE NoteAdventice(dateNotation DATE,\
+createNoteAdventice = "CREATE TABLE NoteAdventice(dateNotation DATE,\
     localisation VARCHAR(250))"
 
 
 
 createdBy =[createEssaiSql,createParcelleSql,createEssaiParcelleSql,createFacteurSql,createModaliteSql,createAdventiceSql,createNoteAdventice]
 
-for request in createdBy:
-    print(request)
+deletedBy=["DROP TABLE EssaiParcelle","DROP TABLE Essai","DROP TABLE Parcelle CASCADE","DROP TABLE Facteur CASCADE","DROP TABLE Modalite","DROP TABLE Adventice","DROP TABLE NoteAdventice"]
 
-# cur.execute(createEssaiSql)
+# Suppression des tables 
+
+for req in deletedBy:
+    print(req)
+    cur.execute(req)
+
+for request in createdBy:
+    print("Requete",request)
+    cur.execute(request)
+
 conn.commit()
