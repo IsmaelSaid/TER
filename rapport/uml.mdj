@@ -1710,7 +1710,7 @@
 											"font": "Arial;13;1",
 											"left": 781,
 											"top": 223,
-											"width": 41.919921875,
+											"width": 92.1552734375,
 											"height": 13,
 											"text": "projet"
 										},
@@ -1745,7 +1745,7 @@
 									"font": "Arial;13;0",
 									"left": 776,
 									"top": 216,
-									"width": 51.919921875,
+									"width": 102.1552734375,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF8VPT/EWSE6wA="
@@ -1769,11 +1769,30 @@
 									"model": {
 										"$ref": "AAAAAAF8VPT/BGSAUIE="
 									},
+									"subViews": [
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF8Wwm/DmNjv/c=",
+											"_parent": {
+												"$ref": "AAAAAAF8VPT/E2SITjs="
+											},
+											"model": {
+												"$ref": "AAAAAAF8Wwm+0WNa/nI="
+											},
+											"font": "Arial;13;0",
+											"left": 781,
+											"top": 246,
+											"width": 92.1552734375,
+											"height": 13,
+											"text": "+codeProjet {id}",
+											"horizontalAlignment": 0
+										}
+									],
 									"font": "Arial;13;0",
 									"left": 776,
 									"top": 241,
-									"width": 51.919921875,
-									"height": 10
+									"width": 102.1552734375,
+									"height": 23
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -1786,8 +1805,8 @@
 									},
 									"font": "Arial;13;0",
 									"left": 776,
-									"top": 251,
-									"width": 51.919921875,
+									"top": 264,
+									"width": 102.1552734375,
 									"height": 10
 								},
 								{
@@ -1827,8 +1846,8 @@
 							"containerChangeable": true,
 							"left": 776,
 							"top": 216,
-							"width": 51.919921875,
-							"height": 45,
+							"width": 102.1552734375,
+							"height": 58,
 							"nameCompartment": {
 								"$ref": "AAAAAAF8VPT/EWSDCRM="
 							},
@@ -4288,7 +4307,7 @@
 											"top": 135,
 											"width": 115.603515625,
 											"height": 13,
-											"text": "EssaiETProjet"
+											"text": "EssaiProjet"
 										},
 										{
 											"_type": "LabelView",
@@ -5484,6 +5503,17 @@
 								"multiplicity": "1..*"
 							}
 						}
+					],
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF8Wwm+0WNa/nI=",
+							"_parent": {
+								"$ref": "AAAAAAF8VPT/BGSAUIE="
+							},
+							"name": "codeProjet",
+							"isID": true
+						}
 					]
 				},
 				{
@@ -5909,7 +5939,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "EssaiETProjet",
+					"name": "EssaiProjet",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",

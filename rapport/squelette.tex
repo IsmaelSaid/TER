@@ -66,12 +66,21 @@ Sémantique des relations:
 
 \section{modèle relationnelle}
 Conversion:\\
-Essaie(\underline{codeEssai},nomEssai)\\
-Adventice(\underline{nomAdventice}) \\
-Parcelle(\underline{codeParcelle},bloc,nomParcelle)\\
-EssaiParcelle(\underline{codeParcelle},\underline{codeEssai},\underline{dateDebut})\\
-Facteur(\underline{codeFacteur},descriptionFacteur)\\
-Modalite(\underline{codeFacteur},\underline{codeParcelle},\underline{dateApplicationModalite})\\
+\begin{itemize}
+  \item Projet(\underline{codeProjet},descriptionProjet)
+  \item Essaie(\underline{codeEssai},nomEssai)
+  \item Essaiprojet(\underline{codeEssai,codeProjet},date)
+  \item Adventice(\underline{nomAdventice}) 
+   % La clé primaire de Essai va migrer vers Parcelle
+  \item Parcelle(\underline{codeParcelle},bloc,nomParcelle,codeEssai)
+  \item Notation(\#codeParcelle,\#nomAdventice,localisation,note,zone,date)
+  \item Facteur(\underline{codeFacteur},descriptionFacteur)
+  \item Modalite(\#codeParcelle,\#codeFacteur,date)
+  \item Pratique(type,outil,produit,description)
+  \item PratiqueParcelle(\#codeParcelle,\#,datePratique)
+  \item Produit(nomProduit,doseMax)
+\end{itemize}
+% Ne pas utiliser les tables: Pratique, produit,matiere active et pratiqueParcelle pour l'instant
 
 
 
