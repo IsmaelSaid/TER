@@ -16,11 +16,19 @@ createEssaiSql = "CREATE TABLE Essai(\
     codeEssai INT PRIMARY KEY,\
     nomEssai VARCHAR(250))"
 
+# Table Projet 
+createProjetSql ="CREATE TABLE Projet(codeProjet INT PRIMARY KEY,descriptionProjet VARCHAR(250))"
+
 #  Table Parcelle
 createParcelleSql="CREATE TABLE Parcelle(\
     codeParcelle INT PRIMARY KEY NOT NULL,\
     bloc VARCHAR(255),\
     nomParcelle VARCHAR)"
+
+# Table Essaiprojet
+createEssaiProjetSql="CREATE TABLE Essaiprojet(\
+    codeEssai INT REFERENCES Essai(codeEssai),\
+    codeProjet INT REFERENCES Projet(codeProjet))"
 
 # # Table EssaiParcelle
 createEssaiParcelleSql="CREATE TABLE EssaiParcelle(\
@@ -53,11 +61,27 @@ createNoteAdventice = "CREATE TABLE NoteAdventice(dateNotation DATE,\
 
 # TODO: Ecrire les CI pour: Localisation data_notation & date_application_modalite
 
-createdBy =[createEssaiSql,createParcelleSql,createEssaiParcelleSql,createFacteurSql,createModaliteSql,createAdventiceSql,createNoteAdventice]
+createdBy =[\
+    createEssaiSql,\
+    createParcelleSql,\
+    createEssaiParcelleSql,\
+    createFacteurSql,\
+    createModaliteSql,\
+    createAdventiceSql,\
+    createNoteAdventice,\
+    createProjetSql]
 
 
 # ======================= Commandes suppression des tables  =======================================
-deletedBy=["DROP TABLE IF EXISTS EssaiParcelle","DROP TABLE IF EXISTS Essai","DROP TABLE IF EXISTS Parcelle CASCADE","DROP TABLE IF EXISTS Facteur CASCADE","DROP TABLE IF EXISTS Modalite","DROP TABLE IF EXISTS Adventice","DROP TABLE IF EXISTS NoteAdventice"]
+deletedBy=[\
+    "DROP TABLE IF EXISTS EssaiParcelle",\
+    "DROP TABLE IF EXISTS Essai",\
+    "DROP TABLE IF EXISTS Parcelle CASCADE",\
+    "DROP TABLE IF EXISTS Facteur CASCADE",\
+    "DROP TABLE IF EXISTS Modalite",\
+    "DROP TABLE IF EXISTS Adventice",\
+    "DROP TABLE IF EXISTS NoteAdventice",\
+    "DROP TABLE IF EXISTS Projet"]
 
 # =======================Execution =======================================
 
