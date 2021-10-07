@@ -16,27 +16,53 @@
 
 
 \title{Raport}
-\author{\'Said Ismael, M1 Informatique}
+\author{Said Ismael, M1 Informatique}
 \date{\today}
 
 \begin{document}
 
 \maketitle % pour écrire le titre
 
+% PAGE BLANCHE
 
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+% FIN PAGE BLANCHE
+
+
+
+% TABLE DES MATIERES
+\tableofcontents
+\newpage
+
+% PAGE BLANCHE
+
+\section{Introduction}
 %% Le résumé:
 \begin{abstract}
   Travail réalisé avec le \textit{Cirad}~\cite{coursera}
 \end{abstract}
 
 
-\section{Introduction}
-\section{Domaine}
-Définition de l'ensemble des termes associés au SGBD \\ 
-\textbf{essaie:Définition}
-\\\textbf{modalité:Définition}
+
 \section{Modèle entité association}
-uml 
+Définition de l'ensemble des termes associés au SGBD \\ 
+\textbf{essaie:} Définition
+\\\textbf{modalité:} Définition \\
+Sémantique des relations:
+\begin{itemize}
+  \item Un essai appartient au minimum à un seul projet et au maximum a n projets 
+  \item Un Projet contient au minimum un seul essai et au maximum n essais
+  \item Un essai met en jeu au minimum une seule parcelle et au maximum n parcelles
+  \item Une parcelle est le sujet de un seul et unique essai
+  \item Une adventice peut se retrouver au minimum sur aucune et au maximum sur n parcelles
+  \item Une parcelle peut contenir au minimum aucune adventice et au maximim n adventices
+  
+\end{itemize}
+
 
 \section{modèle relationnelle}
 Conversion:\\
