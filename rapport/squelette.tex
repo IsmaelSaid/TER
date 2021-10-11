@@ -15,7 +15,7 @@
 \usepackage{amssymb}
 
 
-\title{Raport}
+\title{Prise de notes}
 \author{Said Ismael, M1 Informatique}
 \date{\today}
 
@@ -40,21 +40,40 @@
 
 % PAGE BLANCHE
 
-\section{Introduction}
-%% Le résumé:
+
 \begin{abstract}
-  Travail réalisé avec le \textit{Cirad}~\cite{coursera}
+  Travail réalisé avec le \textit{Cirad}~\cite{coursera}.
+
+
+  Lien vers mon \textit{github}~\cite{github}
 \end{abstract}
 
 
+\section{Introduction}
+Le travail demandé consiste à concevoir une base de données relationnelle.
+\section{Modèle entité-association}
+\subsection{Schéma entité-association}
+\includegraphics[scale=0.35]{Main.jpg}
 
-\section{Modèle entité association}
-Définition de l'ensemble des termes associés au SGBD \\ 
-\textbf{essaie:} Définition
-\\\textbf{modalité:} Définition \\
-Sémantique des relations:
+
+\subsection{Définition des termes}
+
+\textbf{Essai:} \textit{à définir} 
+
+\textbf{Modalité:} \textit{à définir}
+
+\textbf{Parcelle:} \textit{à définir}
+
+\textbf{Adventice:} \textit{à définir}
+
+\textbf{Facteur:} \textit{à définir}
+
+\textbf{Pratique:} \textit{à définir}
+
+
+\subsection{Sémantique des relations}
 \begin{itemize}
-  \item Un essai appartient au minimum à un seul projet et au maximum a n projets 
+  \item Un essai appartient au minimum à un seul projet et au maximum à n projets 
   \item Un Projet contient au minimum un seul essai et au maximum n essais
   \item Un essai met en jeu au minimum une seule parcelle et au maximum n parcelles
   \item Une parcelle est le sujet de un seul et unique essai
@@ -64,21 +83,22 @@ Sémantique des relations:
 \end{itemize}
 
 
-\section{modèle relationnelle}
-Conversion:\\
+\section{modèle relationnel}
+\subsection{Tables}
 \begin{itemize}
-  \item Projet(\underline{codeProjet},descriptionProjet)
+  \item Projet(\underline{codeProjet},descriptionProjet)  
   \item Essaie(\underline{codeEssai},nomEssai)
-  \item Essaiprojet(\underline{codeEssai,codeProjet},date)
+  \item Essaiprojet(\#codeEssai,\#codeProjet,date)
   \item Adventice(\underline{nomAdventice}) 
    % La clé primaire de Essai va migrer vers Parcelle
-  \item Parcelle(\underline{codeParcelle},bloc,nomParcelle,codeEssai)
+  \item Parcelle(\underline{codeParcelle},bloc,nomParcelle,\#codeEssai)
   \item Notation(\#codeParcelle,\#nomAdventice,localisation,note,zone,date)
   \item Facteur(\underline{codeFacteur},descriptionFacteur)
   \item Modalite(\#codeParcelle,\#codeFacteur,date)
-  \item Pratique(type,outil,produit,description)
-  \item PratiqueParcelle(\#codeParcelle,\#,datePratique)
-  \item Produit(nomProduit,doseMax)
+  \item Pratique(\underline{codePratique},type,outil,description)
+  \item PratiqueParcelle(\#codeParcelle,\#datePratique,date)
+  \item Produit(\underline{nomProduit},doseApplique)
+  \item MatiereActive(\underline{codeMatiereActive},dosageMaximal)
 \end{itemize}
 % Ne pas utiliser les tables: Pratique, produit,matiere active et pratiqueParcelle pour l'instant
 
