@@ -79,26 +79,27 @@ Le travail demandé consiste à concevoir une base de données relationnelle.
   \item Une parcelle est le sujet de un seul et unique essai
   \item Une adventice peut se retrouver au minimum sur aucune et au maximum sur n parcelles
   \item Une parcelle peut contenir au minimum aucune adventice et au maximim n adventices
-  
+  \item Un un ou plusieurs facteurs peuvent être appliquées à une parcelle.
+  \item Une parcelle est caractérisée par un ou plusieurs facteurs
 \end{itemize}
 
 
 \section{modèle relationnel}
 \subsection{Tables}
 \begin{itemize}
-  \item Projet(\underline{codeProjet},descriptionProjet)  
-  \item Essaie(\underline{codeEssai},nomEssai)
-  \item Essaiprojet(\#codeEssai,\#codeProjet,date)
-  \item Adventice(\underline{nomAdventice}) 
+  \item projet(\underline{codeprojet},descriptionprojet)  
+  \item essaie(\underline{codeessai},nomessai)
+  \item essaiprojet(\#codeessai,\#codeprojet,date)
+  \item adventice(\underline{nomAdventice}) 
    % La clé primaire de Essai va migrer vers Parcelle
-  \item Parcelle(\underline{codeParcelle},bloc,nomParcelle,\#codeEssai)
-  \item Notation(\#codeParcelle,\#nomAdventice,localisation,note,zone,date)
-  \item Facteur(\underline{codeFacteur},descriptionFacteur)
-  \item Modalite(\#codeParcelle,\#codeFacteur,date)
-  \item Pratique(\underline{codePratique},type,outil,description)
-  \item PratiqueParcelle(\#codeParcelle,\#datePratique,date)
-  \item Produit(\underline{nomProduit},doseApplique)
-  \item MatiereActive(\underline{codeMatiereActive},dosageMaximal)
+  \item parcelle(\underline{codeparcelle},bloc,nomparcelle,\#codeessai)
+  \item notation(\#codeparcelle,\#nomadventice,localisation,note,zone,date)
+  \item facteur(\underline{codefacteur},descriptionfacteur)
+  \item modalite(\#codeparcelle,\#codefacteur,date)
+  \item pratiqueagricole(\underline{codepratique},type,outil,description)
+  \item realisation(\#codeparcelle,\#datepratique,date)
+  \item produit(\underline{nomproduit},doseapplique)
+  \item matiereactive(\underline{codematiereactive},dosagemaximal)
 \end{itemize}
 % Ne pas utiliser les tables: Pratique, produit,matiere active et pratiqueParcelle pour l'instant
 
