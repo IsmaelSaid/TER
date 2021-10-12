@@ -7,3 +7,4 @@
 *.blg
 *.gz
 *.fls
+*.pyc
