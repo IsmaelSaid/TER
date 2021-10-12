@@ -1,5 +1,12 @@
 # Ce script sert a innitialiser les données de la base de donnée
 import psycopg2 as ps
+import pandas as pd
+
+debug = True 
+
+import os
+from pathlib import Path
+
 
 # ======================= Connexion a la base de donnée postGresql ================================
 host = "localhost"
@@ -86,11 +93,13 @@ deletedBy=[\
 # =======================Execution =======================================
 
 for req in deletedBy:
-    print(req)
+    if debug:
+        print(req)
     cur.execute(req)
 
 for request in createdBy:
-    print(request)
+    if debug:
+        print(request)
     cur.execute(request)
 
 
@@ -116,7 +125,34 @@ cur.execute(\
 
 
 conn.commit()
+
 # =======================Données réels=====================================
+
+def fill_essai():
+    # retouver les noms de fichier 
+    fichier=(os.path.dirname(os.path.realpath(__file__))).replace("\\","/")+"/test.csv"
+    if debug:
+         print(fichier)
+    
+    # chargement du fichier
+    data = pd.read_csv(fichier)
+    df = pd.DataFrame(data)
+
+    # Selection des colonnes 
+    selected_cols= df.iloc[:, 0].drop_duplicates()
+    # print(selected_cols)
+
+    # Création des requettes
+
+    for str in selected_cols:
+        print(str+"str")
+
+    print(data)
+    return 0
+
 def fillDatabase():
     # TODO 
     print("a développer")
+
+fill_essai()
+print("Path at terminal when executing this file")
