@@ -8,3 +8,4 @@
 *.gz
 *.fls
 *.pyc
+src/__pycache__/*
