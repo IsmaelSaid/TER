@@ -96,5 +96,48 @@ def RequetesInsertionEssaiSql():
             # print(request)
             code += 1
     return result
+    
+def RequeteInsertionAdventiceSql():
+    # TODO 
+    result = []
+    return result
+
+def RequeteInsertionProjetSql():
+    # TODO 
+    result = []
+    return result
+
+def RequeteInsertionParcelleSql():
+    # TODO 
+    result = []
+    return result
+def RequeteInsertionNotationSql():
+    # TODO 
+    result = []
+    return result
+def RequeteInsertionFacteurSql():
+    # TODO 
+    result = []
+    return result
+def RequeteInsertionModaliteSql():
+    # TODO 
+    result = []
+    return result
+def RequeteInsertionPratiqueSql():
+    # TODO 
+    result = []
+    return result
+def RequeteInsertionPratiqueParcelleSql():
+    # TODO 
+    result = []
+    return result
+def RequeteInsertionProduitSql():
+    # TODO 
+    result = []
+    return result
+def RequeteInsertionMatiereActiveSql():
+    # TODO 
+    result = []
+    return result
 
 
