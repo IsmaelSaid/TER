@@ -63,7 +63,7 @@
 											"top": 215,
 											"width": 95.7734375,
 											"height": 13,
-											"text": "Essai"
+											"text": "essai"
 										},
 										{
 											"_type": "LabelView",
@@ -135,7 +135,7 @@
 											"top": 238,
 											"width": 95.7734375,
 											"height": 13,
-											"text": "+codeEssai {id}",
+											"text": "+codeessai {id}",
 											"horizontalAlignment": 0
 										},
 										{
@@ -152,7 +152,7 @@
 											"top": 253,
 											"width": 95.7734375,
 											"height": 13,
-											"text": "+nomEssai",
+											"text": "+nomessai",
 											"horizontalAlignment": 0
 										}
 									],
@@ -275,7 +275,7 @@
 											"top": 447,
 											"width": 110.95068359375,
 											"height": 13,
-											"text": "Parcelle"
+											"text": "parcelle"
 										},
 										{
 											"_type": "LabelView",
@@ -347,7 +347,7 @@
 											"top": 470,
 											"width": 110.95068359375,
 											"height": 13,
-											"text": "+codeParcelle {id}",
+											"text": "+codeparcelle {id}",
 											"horizontalAlignment": 0
 										},
 										{
@@ -504,7 +504,7 @@
 											"top": 471,
 											"width": 115.603515625,
 											"height": 13,
-											"text": "Facteur"
+											"text": "facteur"
 										},
 										{
 											"_type": "LabelView",
@@ -576,7 +576,7 @@
 											"top": 494,
 											"width": 115.603515625,
 											"height": 13,
-											"text": "+code_facteur {id}",
+											"text": "+codefacteur {id}",
 											"horizontalAlignment": 0
 										}
 									],
@@ -1225,7 +1225,7 @@
 											"top": 583,
 											"width": 115.603515625,
 											"height": 13,
-											"text": "Modalite"
+											"text": "modalite"
 										},
 										{
 											"_type": "LabelView",
@@ -1297,7 +1297,7 @@
 											"top": 606,
 											"width": 115.603515625,
 											"height": 13,
-											"text": "+Date",
+											"text": "+datemodalite",
 											"horizontalAlignment": 0
 										}
 									],
@@ -1784,7 +1784,7 @@
 											"top": 246,
 											"width": 104.4189453125,
 											"height": 13,
-											"text": "+codeProjet {id}",
+											"text": "+codeprojet {id}",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1801,7 +1801,7 @@
 											"top": 261,
 											"width": 104.4189453125,
 											"height": 13,
-											"text": "+descriptionProjet",
+											"text": "+descriptionprojet",
 											"horizontalAlignment": 0
 										}
 									],
@@ -1996,7 +1996,7 @@
 											"top": 710,
 											"width": 112.38525390625,
 											"height": 13,
-											"text": "+nomAdventice {id}",
+											"text": "+nomadventice {id}",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2657,7 +2657,7 @@
 											"top": 415,
 											"width": 106.615234375,
 											"height": 13,
-											"text": "pratique"
+											"text": "pratiqueagricole"
 										},
 										{
 											"_type": "LabelView",
@@ -2780,7 +2780,7 @@
 											"top": 483,
 											"width": 106.615234375,
 											"height": 13,
-											"text": "+codePratique {id}",
+											"text": "+codepratique {id}",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2903,7 +2903,7 @@
 											"top": 319,
 											"width": 118.498046875,
 											"height": 13,
-											"text": "PratiqueETParcelle"
+											"text": "realisation"
 										},
 										{
 											"_type": "LabelView",
@@ -2975,7 +2975,7 @@
 											"top": 342,
 											"width": 118.498046875,
 											"height": 13,
-											"text": "+datePratique",
+											"text": "+daterealisation",
 											"horizontalAlignment": 0
 										}
 									],
@@ -3462,7 +3462,7 @@
 											"top": 174,
 											"width": 86.37890625,
 											"height": 13,
-											"text": "+NomProduit",
+											"text": "+nomproduit",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3479,7 +3479,7 @@
 											"top": 189,
 											"width": 86.37890625,
 											"height": 13,
-											"text": "+doseAppliqué",
+											"text": "+doseapplique",
 											"horizontalAlignment": 0
 										}
 									],
@@ -4326,7 +4326,7 @@
 											"top": 135,
 											"width": 115.603515625,
 											"height": 13,
-											"text": "EssaiProjet"
+											"text": "essaiprojet"
 										},
 										{
 											"_type": "LabelView",
@@ -4767,7 +4767,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Essai",
+					"name": "essai",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -4807,7 +4807,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8ShPQZj45ylY="
 							},
-							"name": "codeEssai",
+							"name": "codeessai",
 							"isID": true
 						},
 						{
@@ -4816,7 +4816,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8ShPQZj45ylY="
 							},
-							"name": "nomEssai"
+							"name": "nomessai"
 						}
 					]
 				},
@@ -4826,7 +4826,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Parcelle",
+					"name": "parcelle",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -4894,7 +4894,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8ShTkfT5qi68="
 							},
-							"name": "codeParcelle",
+							"name": "codeparcelle",
 							"isID": true
 						},
 						{
@@ -4912,7 +4912,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF8ShTkfT5qi68="
 							},
-							"name": "nomParcelle"
+							"name": "nomParcelle",
+							"type": ""
 						}
 					]
 				},
@@ -4958,7 +4959,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Facteur",
+					"name": "facteur",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -5010,8 +5011,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8Szrp+R5CfIg="
 							},
-							"name": "code_facteur",
-							"type": "",
+							"name": "codefacteur",
 							"isID": true
 						}
 					]
@@ -5361,7 +5361,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Modalite",
+					"name": "modalite",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -5413,8 +5413,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8TtDQDQFSl2c="
 							},
-							"name": "Date",
-							"type": ""
+							"name": "datemodalite"
 						}
 					]
 				},
@@ -5526,7 +5525,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8VPT/BGSAUIE="
 							},
-							"name": "codeProjet",
+							"name": "codeprojet",
 							"isID": true
 						},
 						{
@@ -5535,7 +5534,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8VPT/BGSAUIE="
 							},
-							"name": "descriptionProjet"
+							"name": "descriptionprojet"
 						}
 					]
 				},
@@ -5629,7 +5628,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8VRfNfni9R6c="
 							},
-							"name": "nomAdventice",
+							"name": "nomadventice",
 							"isID": true
 						}
 					]
@@ -5730,7 +5729,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "pratique",
+					"name": "pratiqueagricole",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -5796,7 +5795,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8VT40+YGVY64="
 							},
-							"name": "codePratique",
+							"name": "codepratique",
 							"isID": true
 						}
 					]
@@ -5807,7 +5806,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "PratiqueETParcelle",
+					"name": "realisation",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -5859,7 +5858,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8VUcuE4b3rcg="
 							},
-							"name": "datePratique"
+							"name": "daterealisation"
 						}
 					]
 				},
@@ -5935,8 +5934,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8VUf8a4ilYtQ="
 							},
-							"name": "NomProduit",
-							"type": ""
+							"name": "nomproduit"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -5944,7 +5942,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF8VUf8a4ilYtQ="
 							},
-							"name": "doseAppliqué"
+							"name": "doseapplique"
 						}
 					]
 				},
@@ -5962,7 +5960,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "EssaiProjet",
+					"name": "essaiprojet",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",

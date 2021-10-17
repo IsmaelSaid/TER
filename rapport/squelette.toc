@@ -1,8 +1,8 @@
-\babel@toc {french}{}\relax 
+\babel@toc {french}{}
 \contentsline {section}{\numberline {1}Introduction}{4}{section.1}%
 \contentsline {section}{\numberline {2}Modèle entité-association}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Schéma entité-association}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Définition des termes}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Sémantique des relations}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}Sémantique des relations}{4}{subsection.2.3}%
 \contentsline {section}{\numberline {3}modèle relationnel}{5}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Tables}{5}{subsection.3.1}%

@@ -10,46 +10,46 @@ def RequetesCreationTables():
         nomEssai VARCHAR(250))"
 
     # Table Projet 
-    createProjetSql ="CREATE TABLE Projet(codeProjet INT PRIMARY KEY,descriptionProjet VARCHAR(250))"
+    createProjetSql ="CREATE TABLE Projet(codeprojet INT PRIMARY KEY,descriptionprojet VARCHAR(250))"
 
     #  Table Parcelle
     createParcelleSql="CREATE TABLE Parcelle(\
-        codeParcelle INT PRIMARY KEY NOT NULL,\
+        codeparcelle INT PRIMARY KEY NOT NULL,\
         bloc VARCHAR(255),\
-        nomParcelle VARCHAR)"
+        nomparcelle VARCHAR)"
 
     # Table Essaiprojet
     createEssaiProjetSql="CREATE TABLE Essaiprojet(\
-        codeEssai INT REFERENCES Essai(codeEssai),\
-        codeProjet INT REFERENCES Projet(codeProjet))"
+        codeessai INT REFERENCES Essai(codeEssai),\
+        codeprojet INT REFERENCES Projet(codeProjet))"
 
     # # Table EssaiParcelle
-    createEssaiParcelleSql="CREATE TABLE EssaiParcelle(\
-        dateDebut DATE,\
-        codeParcelle INT REFERENCES Parcelle(codeParcelle),\
-        codeEssai INT REFERENCES Essai(codeEssai))"
+    createEssaiParcelleSql="CREATE TABLE Essaiparcelle(\
+        datedebut DATE,\
+        codeparcelle INT REFERENCES Parcelle(codeParcelle),\
+        codeessai INT REFERENCES Essai(codeEssai))"
 
 
     # # Table Facteur
     createFacteurSql="CREATE TABLE Facteur(\
-        codeFacteur INT PRIMARY KEY NOT NULL,\
-        descriptionFacteur VARCHAR(250))"
+        codefacteur INT PRIMARY KEY NOT NULL,\
+        descriptionfacteur VARCHAR(250))"
 
     # # Table Modalite
     createModaliteSql="CREATE TABLE Modalite(\
-        dateApplicationModalite DATE,\
-        codeParcelle INT REFERENCES Parcelle(codeParcelle),\
-        codeFacteur INT REFERENCES Facteur(codeFacteur),\
-        PRIMARY KEY (codeFacteur,dateApplicationModalite))"
+        dateapplicationmodalite DATE,\
+        codeparcelle INT REFERENCES Parcelle(codeparcelle),\
+        codefacteur INT REFERENCES Facteur(codefacteur),\
+        PRIMARY KEY (codefacteur,dateapplicationmodalite))"
 
 
     # # Table Adventice
 
-    createAdventiceSql="CREATE TABLE Adventice(codeAdventice INT PRIMARY KEY NOT NULL,\
-        nomAdventice VARCHAR(250))"
+    createAdventiceSql="CREATE TABLE Adventice(codeadventice INT PRIMARY KEY NOT NULL,\
+        nomadventice VARCHAR(250))"
 
     # # Table noteAdventice 
-    createNoteAdventice = "CREATE TABLE NoteAdventice(dateNotation DATE,\
+    createNoteAdventice = "CREATE TABLE NoteAdventice(datenotation DATE,\
         localisation VARCHAR(250))"
     return [\
         createEssaiSql,\
@@ -62,13 +62,13 @@ def RequetesCreationTables():
         createProjetSql]
 
 def RequetesSuppressionTables():
-    return ["DROP TABLE IF EXISTS EssaiParcelle",\
+    return ["DROP TABLE IF EXISTS Essaiparcelle",\
         "DROP TABLE IF EXISTS Essai",\
         "DROP TABLE IF EXISTS Parcelle CASCADE",\
         "DROP TABLE IF EXISTS Facteur CASCADE",\
         "DROP TABLE IF EXISTS Modalite",\
         "DROP TABLE IF EXISTS Adventice",\
-        "DROP TABLE IF EXISTS NoteAdventice",\
+        "DROP TABLE IF EXISTS Noteadventice",\
         "DROP TABLE IF EXISTS Projet"]
 
     # TODO Automatiser la rechercher des fichiers correspondant
