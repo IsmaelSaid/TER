@@ -20,14 +20,14 @@ def RequetesCreationTables():
 
     # Table Essaiprojet
     createEssaiProjetSql="CREATE TABLE Essaiprojet(\
-        codeessai INT REFERENCES Essai(codeEssai),\
-        codeprojet INT REFERENCES Projet(codeProjet))"
+        codeessai INT REFERENCES Essai(codeessai),\
+        codeprojet INT REFERENCES Projet(codeprojet))"
 
     # # Table EssaiParcelle
     createEssaiParcelleSql="CREATE TABLE Essaiparcelle(\
         datedebut DATE,\
-        codeparcelle INT REFERENCES Parcelle(codeParcelle),\
-        codeessai INT REFERENCES Essai(codeEssai))"
+        codeparcelle INT REFERENCES Parcelle(codeparcelle),\
+        codeessai INT REFERENCES Essai(codeessai))"
 
 
     # # Table Facteur
